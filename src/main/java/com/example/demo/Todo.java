@@ -10,7 +10,6 @@ public class Todo {
 	@Id
 	@GeneratedValue
 	private int item_number;
-	
 	private String name;
 	private int amount;
 	private int inventory_code;
@@ -54,12 +53,6 @@ public class Todo {
 	public void setInventory_code(int inventory_code) {
 		this.inventory_code = inventory_code;
 	}
-
-//	public Todo updateAmount(Todo todo, int numebr) {
-//		todo.setAmount(this.amount - numebr);
-//		return todo;
-//		
-//	}
 
 	
 	

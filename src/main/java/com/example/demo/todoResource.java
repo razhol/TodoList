@@ -28,51 +28,38 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RestController 
 public class todoResource {
 	
-	
-	
- 
-	int num = 4;
-	
 	@Autowired
 	private TodoService service;
 	
 	
 	@PostMapping("/addTodo")
 	public Todo addTodo(@RequestBody Todo todo) {
-		return service.saveTodo(todo);
-		
+		return service.saveTodo(todo);	
 	}
 	
 	@PostMapping("/addTodos")
 	public List<Todo> addTodo(@RequestBody List<Todo> todos) {
-		return service.saveTodos(todos);
-		
+		return service.saveTodos(todos);	
 	}
 	
 	@GetMapping("/Todos")
 	List<Todo> findAllTodos(){
 		return service.getTodos();
-		
 	}
+	
 	@GetMapping("/Todos/{item_number}")
 	public Todo findTodoByItemNo(@PathVariable int item_number) {
 		return service.getTodosByItemNo(item_number);
 	}
 	
-//	@PutMapping("/update")
-//	public Todo UpdateItem(@RequestBody Todo todo) {
-//		return service.updateTodo(todo);
-//	}
 	
 	@PutMapping("/Withdrawal/{item_number}/{amount}")
 	public Todo WithdrawalQuantity(@PathVariable int item_number, @PathVariable int amount) {
-		
 	 return service.DecreaseAmount(item_number, amount);
 	}
 	
 	@PutMapping("/Deposit/{item_number}/{amount}")
 	public Todo DepositQuantity(@PathVariable int item_number, @PathVariable int amount) {
-		
 	 return service.AddAmount(item_number, amount);
 	}
 	
