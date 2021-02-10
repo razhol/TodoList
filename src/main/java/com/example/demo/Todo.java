@@ -26,7 +26,6 @@ public class Todo {
     public Todo() {
     }
 	
-
 	public void setItem_number(int item_number) {
 		this.item_number = item_number;
 	}
@@ -38,18 +37,23 @@ public class Todo {
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	public int getAmount() {
 		return amount;
 	}
+	
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
+	
 	public int getInventory_code() {
 		return inventory_code;
 	}
+	
 	public void setInventory_code(int inventory_code) {
 		this.inventory_code = inventory_code;
 	}
